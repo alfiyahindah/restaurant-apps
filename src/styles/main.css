@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
+button,
+a,
+input[type="text"],
+textarea {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  margin: 8px;
+  box-sizing: border-box;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  text-align: center;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Body */
+* {
+  padding: 0;
+  margin: 0;
+}
+ 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* AppBar */
+.app-bar {
+  padding: 8px 16px;
+  background-color: #333;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+ 
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+ 
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__brand h1 {
+  color: white;
+  font-size: 1.5rem;
+  user-select: none;
+}
+ 
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #333;
+  overflow: hidden;
+  font-size: 20px;
+}
+ 
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+ 
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/* Jumbotron */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../public/images/hero-image_3-large.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #008000;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* Main */
+.explore-text {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 16px;
+}
+
+.restaurant-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  flex: 1 1 calc(33.333% - 1rem);
+  box-sizing: border-box;
+  min-width: 200px;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.restaurant-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-item__header {
+  position: relative;
+}
+
+.restaurant-item__header__picture {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-item__header__rating {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.restaurant-item__content {
+  padding: 16px;
+}
+
+.restaurant-item__content h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.restaurant-item__content h2 a {
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+}
+
+.restaurant-item__content h2 a:hover {
+  color: #DC5F00;
+}
+
+.restaurant-item__city {
+  font-size: 14px;
+  color: #333;
+  margin: 8px 0;
+}
+
+.restaurant-item__description {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Detail */
+.restaurant-detail {
+  padding: 16px;
+}
+
+.restaurant-detail__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.restaurant-detail__image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.restaurant-detail__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.restaurant-detail__name {
+  font-size: 2em;
+  margin: 0;
+}
+
+.restaurant-detail__address,
+.restaurant-detail__city,
+.restaurant-detail__rating,
+.restaurant-detail__description {
+  margin: 0;
+}
+
+.restaurant-detail__menus {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 16px;
+}
+
+.restaurant-detail__foods,
+.restaurant-detail__drinks {
+  flex: 1;
+  text-align: center;
+}
+
+.restaurant-detail__foods h3,
+.restaurant-detail__drinks h3 {
+  text-align: center;
+}
+
+.restaurant-detail__separator {
+  flex-basis: 1px;
+  background-color: #ccc;
+  width: 100%;
+  height: auto;
+}
+
+.restaurant-detail__reviews {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.restaurant-detail__review {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+/* Like */
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
